@@ -9,6 +9,35 @@
 </head>
 <body>
     <header>
+
+         <!-- Hamburger meny --> 
+         <nav class="first-nav">
+         <h1>barbershop</h1>
+        <button id="menu-button">MENU</button>
+        <div class="menu">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">PRICING</a></li>
+                <li><a href="#">GALLERY</a></li>
+                <li><a href="#">TEAM</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+
+        </div>
+    </nav>
+        <!-- din andra html-kod -->
+    <script>
+    const menuBtn = document.querySelector('#menu-button');
+    menuBtn.addEventListener('click', () => {
+    menuBtn.classList.toggle('menu-open');
+});
+    </script>
+
+
+
+   <!-- Desktop
     <nav class="main-nav">
         <h1>barbershop</h1>
         
@@ -23,11 +52,12 @@
     </ul>
 
     </nav>
+    -->
 </header>
 
 <main>
-<section class="first-landing">
-    <img src="img/background.jpg" alt="background picture of our barber shop"/>
+<section class="landing">
+    <!--<img src="img/background.jpg" alt="background picture of our barber shop"/> -->
     <h2>welcome to barbershop</h2>
     <h3>we will make <span>your style</span> of your dreams</h3>
     <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parrts of sentences fly into your mouth.</p>
