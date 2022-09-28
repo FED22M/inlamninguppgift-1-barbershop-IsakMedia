@@ -3,6 +3,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;1,400&display=swap');
 
+*>body {box-sizing: border-box;}
 
 h1 , h2 , h3 {
     font-family: 'Barlow Semi Condensed', sans-serif;
@@ -19,8 +20,10 @@ ul {list-style-type: none;}
 
 
 
-body {margin:0;
-    padding:0;}
+body {
+    margin:0;
+    padding:0;
+    }
 
 :root {
     --gold: rgb(191, 146, 91);
@@ -74,10 +77,21 @@ button + .menu {
 .first-nav button {}
 
 /* First section */
+
 .landing {
     
-    background-image: url(img/background.jpg) ;
+    background-image: url(img/background.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
     color: var(--beige);
+    
+}
+
+.landing img {
+    height:200px; 
+    width:100%;
+   
 }
 
 .landing h2 {
@@ -111,6 +125,34 @@ button + .menu {
 
 
 /* second section */
+.appointments {display:flex;
+    flex-direction: column;
+
+      
+}
+
+.app-cards {
+    color:var(--beige);
+    height:600px;
+    text-align: center;
+    min-width:400px;
+}
+
+
+.app-cards:nth-child(even) {
+    background-color: var(--gold);
+}
+
+.app-cards:nth-child(odd) {
+    background-color:rgb(216, 171, 117);
+}
+
+/* IMAGE STYLING */ 
+
+.app-cards img {
+    clip-path: circle(100px at center);
+    overflow: hidden;
+}
 
 
 
