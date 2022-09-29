@@ -3,7 +3,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;1,400&display=swap');
 
-*>body {box-sizing: border-box;}
+*>body {box-sizing: ;}
 
 h1 , h2 , h3 {
     font-family: 'Barlow Semi Condensed', sans-serif;
@@ -83,13 +83,14 @@ button + .menu {
     background-image: url(img/background.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-
     color: var(--beige);
+    padding:50vh;
+    overflow: 
     
 }
 
-.landing img {
-    height:200px; 
+.landing background-img {
+    
     width:100%;
    
 }
@@ -115,10 +116,16 @@ button + .menu {
 
 
 .landing .landing-btn {
+
+    font-family: 'Poppins', sans-serif;
     padding:10px;
     background-color: transparent;
     color:var(--gold);
     border:var(--gold) solid 2px;
+}
+
+.landing-btn:hover {
+    background-color:rgba(9, 9, 9, 0.098);
 }
 
 
@@ -127,22 +134,18 @@ button + .menu {
 /* second section */
 .appointments {display:flex;
     flex-direction: column;
-
-      
+     
 }
-
 .app-cards {
     color:var(--beige);
-    height:600px;
     text-align: center;
-    min-width:400px;
+     
+    padding:0 15vw ;
 }
-
 
 .app-cards:nth-child(even) {
     background-color: var(--gold);
 }
-
 .app-cards:nth-child(odd) {
     background-color:rgb(216, 171, 117);
 }
@@ -150,13 +153,24 @@ button + .menu {
 /* IMAGE STYLING */ 
 
 .app-cards img {
-    clip-path: circle(100px at center);
-    overflow: hidden;
+    width:30%;
+    max-width:50%;
+    clip-path: circle(30% at center);
+    
 }
 
 
 
 /* third section */
+.about-barber {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    
+}
+
+
+
 
 
 /* fourth section */
