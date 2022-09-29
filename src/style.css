@@ -211,6 +211,30 @@ button + .menu {
 
 /* fourth section */
 
+.testimonial {
+    background-color: rgb(205, 201, 201);
+    text-align: center;
+}
+
+.testimonial h2 {
+    color:var(--gold);
+    font-size: 0.8em;
+}
+
+/* CAROSEL START */
+
+.test-card {
+    background-color: white;
+    height:100%;
+    width:80%;
+}
+
+.test-card img {width:5%;
+height:5%;}
+
+.test-card-person {
+    display: flex;
+}
 
 
 /* footer */
