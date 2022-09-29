@@ -76,6 +76,7 @@ button + .menu {
 
 .first-nav button {}
 
+
 /* First section */
 
 .landing {
@@ -166,10 +167,45 @@ button + .menu {
     display: flex;
     flex-direction: column;
     justify-content:space-between;
+    padding:10px;
     
 }
 
+.about-barber-text h2 {
+    padding-top:10px;
+    font-size:1em ;
+    color:var(--gold);
+}
 
+.about-barber-booking {
+    display:flex;
+    background-color: var(--gold);
+    height:100px;
+    width:60%;
+    color:var(--beige);
+    align-items: center;
+}
+
+.circle {
+    background-color: black;
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+}
+.about-barber-booking img {
+    width:40px;
+    padding:10px;
+}
+
+.about-barber-booking h3 {
+    font-size:0.8em ;
+}
+
+.about-barber-booking span {
+    display: block;
+    font-size: 3em;
+    text-align: center;
+}
 
 
 
