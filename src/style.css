@@ -19,7 +19,9 @@ p {
 ul {list-style-type: none;}
 
 a {text-decoration: none;
-    color:var(--beige)
+    color:var(--beige);
+    font-family:'Poppins', sans-serif;
+    text-transform: capitalize;
 }
 
 
@@ -325,7 +327,6 @@ position:"absolute"
   }
 
 
-
 .social {
     position: relative;
     background-color:var(--gold);
@@ -354,4 +355,28 @@ position:"absolute"
     height:30px;
     width:30px;
     border-radius: 50%;
+}
+
+
+.last-card-list {
+    display: flex;
+}
+
+.footer-card ul {
+    padding:0;
+}
+
+.footer-card li::before {
+    content:">";
+    padding:10px;
+}
+
+
+.footer-card-last ul {
+    padding:0;
+}
+
+.last-card1 {
+    display: inline-block;
+    width:3%;
 }
