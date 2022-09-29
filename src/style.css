@@ -18,6 +18,10 @@ p {
 
 ul {list-style-type: none;}
 
+a {text-decoration: none;
+    color:var(--beige)
+}
+
 
 
 body {
@@ -80,14 +84,41 @@ button + .menu {
 /* First section */
 
 .landing {
-    
+
+
+    position:relative;
     background-image: url(img/background.jpg);
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     color: var(--beige);
-    padding:50vh;
-    overflow: 
+    height:100vh;
+
     
+}
+/*
+sätt relative på parent för att inte bodyn
+ska räknas som nästa parent med en position.
+
+position:absolute; på både den mörkande div 
+som ska ligga över, men också på texten 
+på bakgrunden. 
+sen använder man z-index om det är knepigt. 
+
+position ska också användas på cirklarna
+i appcards
+där kan man använda minus-värden
+
+
+*/
+
+
+/* om man ska position */
+
+.landing-container {
+    padding:10px;
+    max-width:1000px;
+     /* ge den rätt bredd */
 }
 
 .landing background-img {
@@ -129,6 +160,13 @@ button + .menu {
     background-color:rgba(9, 9, 9, 0.098);
 }
 
+/* beskär bilderna i photoshop 
+"object-fit:cover"
+"object-position" (ej pixelvärde
+
+margin minusvärde
+position:"absolute"
+*/
 
 
 
@@ -142,14 +180,16 @@ button + .menu {
     text-align: center;
      
     padding:0 15vw ;
+    background-color:rgb(216, 171, 117);
 }
 
 .app-cards:nth-child(even) {
     background-color: var(--gold);
 }
+/*
 .app-cards:nth-child(odd) {
     background-color:rgb(216, 171, 117);
-}
+} */
 
 /* IMAGE STYLING */ 
 
@@ -224,17 +264,94 @@ button + .menu {
 /* CAROSEL START */
 
 .test-card {
+    
     background-color: white;
-    height:100%;
-    width:80%;
+    height: 400px;
+    width: 400px;
+    padding:10px;
+    
+    
 }
-
-.test-card img {width:5%;
-height:5%;}
 
 .test-card-person {
     display: flex;
+    text-align:justify;
+    padding-left:3vw;
+
+}
+
+.test {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:10px;
+}
+
+.reviewer {
+    width:30%;
+    border-radius: 50%;
+    
+}
+
+.test-card-person img {
+    width:20%;
+}
+
+.costumer {
+    font-size: 0.6em;
+    color:var(--gold);
+    text-transform: uppercase;
+    margin:0;
 }
 
 
 /* footer */
+
+.main-footer {
+    background-color: black;
+    color:var(--beige);
+    display:flex;
+    flex-direction: column;
+    gap:2em;
+}
+
+
+
+.buttons-flex {
+    display: flex;
+    position:relative;
+    gap:10px;
+    
+  }
+
+
+
+.social {
+    position: relative;
+    background-color:var(--gold);
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+}
+
+.social img {
+    width:30%;
+    position: relative;
+    top: 6px; left:10px;
+}
+
+
+.facebook img {
+    width:20%;
+    padding:10px;
+    position: relative;
+    top:-1px; left:0;
+}
+
+.facebook {
+    position: relative;
+    background-color:var(--gold);
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+}
