@@ -3,7 +3,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;1,400&display=swap');
 
-*>body {box-sizing: ;}
+*>body {box-sizing:border-box ;}
 
 h1 , h2 , h3 {
     font-family: 'Barlow Semi Condensed', sans-serif;
@@ -11,6 +11,8 @@ h1 , h2 , h3 {
     padding:0;
     margin:0;
 }
+
+/*line-height */
 
 p {
     font-family: 'Poppins', sans-serif;
@@ -98,6 +100,22 @@ button + .menu {
 
     
 }
+
+.landing-container {
+    position: absolute;
+    margin-top:0;
+    z-index: 2;
+}
+
+.landing-container-dimmer {
+    z-index: 1;
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:5rem;
+    left:center;
+    background-color: rgba(0, 0, 0, 0.650);
+}
 /*
 sätt relative på parent för att inte bodyn
 ska räknas som nästa parent med en position.
@@ -118,6 +136,7 @@ där kan man använda minus-värden
 /* om man ska position */
 
 .landing-container {
+    z-index:1;
     padding:10px;
     max-width:1000px;
      /* ge den rätt bredd */
@@ -143,7 +162,7 @@ där kan man använda minus-värden
 
 .landing span {
     color:transparent;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.676);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.900);
     -webkit-text-fill-color: transparent;
     }
 
@@ -159,7 +178,7 @@ där kan man använda minus-värden
 }
 
 .landing-btn:hover {
-    background-color:rgba(9, 9, 9, 0.098);
+    background-color: rgba(0, 0, 0, 0.301);
 }
 
 /* beskär bilderna i photoshop 
@@ -173,36 +192,41 @@ position:"absolute"
 
 
 /* second section */
-.appointments {display:flex;
+.appointments {
+    z-index: 2;
+    position: relative;
+    display:flex;
     flex-direction: column;
      
 }
 .app-cards {
+    position: relative;
     color:var(--beige);
     text-align: center;
-     
-    padding:0 15vw ;
+    padding:0 15vw;
     background-color:rgb(216, 171, 117);
+    
+    
 }
 
 .app-cards:nth-child(even) {
     background-color: var(--gold);
 }
-/*
-.app-cards:nth-child(odd) {
-    background-color:rgb(216, 171, 117);
-} */
 
 /* IMAGE STYLING */ 
 
 .app-cards img {
-    width:30%;
-    max-width:50%;
-    clip-path: circle(30% at center);
-    
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    position: relative;
+    top:-100px;
+    margin:auto;
 }
 
-
+.app-cards p {
+    padding-bottom: 100px;
+}
 
 /* third section */
 .about-barber {
@@ -255,7 +279,8 @@ position:"absolute"
 
 .testimonial {
     background-color: rgb(205, 201, 201);
-    text-align: center;
+    position:relative;
+    
 }
 
 .testimonial h2 {
@@ -263,40 +288,78 @@ position:"absolute"
     font-size: 0.8em;
 }
 
+.testimonial h2,h3 {
+    padding-left:20px;
+}
+
 /* CAROSEL START */
 
 .test-card {
-    
+    position: relative;
     background-color: white;
-    height: 400px;
-    width: 400px;
-    padding:10px;
-    
-    
+    height: 170px;
+    width: 300px;
+    margin:20px;
+    border-radius:5px;  
 }
+
+
+/* QOUTE ICON START */
+.qoute-background {
+    position:absolute;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    background-color:var(--gold);
+    top:-18px;
+    left:8px;
+
+}
+.qoute-icon {
+    width:20px;
+    position: relative;
+    top:-6px;
+    left:18px;
+    transform: rotate(180deg);
+}
+
+/* QOUTE ICON END */ 
+
+.test {
+padding:10px;
+}
+
+
+.test-card p {
+ padding-left:10px;
+ margin-left:10px;
+ font-size: 0.8em;
+}
+
 
 .test-card-person {
     display: flex;
     text-align:justify;
-    padding-left:3vw;
-
+    padding-left:1vw;
 }
 
 .test {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding:10px;
 }
 
 .reviewer {
-    width:30%;
+    width: 20%;
+    height:20%;
     border-radius: 50%;
+    
     
 }
 
-.test-card-person img {
-    width:20%;
+.rev-icon {
+    padding-left:20px;
+
 }
 
 .costumer {
@@ -304,6 +367,8 @@ position:"absolute"
     color:var(--gold);
     text-transform: uppercase;
     margin:0;
+    padding-left:10px;
+
 }
 
 
@@ -376,7 +441,10 @@ position:"absolute"
     padding:0;
 }
 
+.last-card-list {
+    display:flex;
+}
+
 .last-card1 {
-    display: inline-block;
     width:3%;
 }
