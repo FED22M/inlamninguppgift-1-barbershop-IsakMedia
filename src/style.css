@@ -206,7 +206,6 @@ position:"absolute"
     padding:0 15vw;
     background-color:rgb(216, 171, 117);
     
-    
 }
 
 .app-cards:nth-child(even) {
@@ -247,20 +246,28 @@ position:"absolute"
     display:flex;
     background-color: var(--gold);
     height:100px;
-    width:60%;
+    width:200px;
     color:var(--beige);
     align-items: center;
+    
 }
 
+
 .circle {
+    position: relative;
+    margin-left:8px;
+    padding:2px;
     background-color: black;
     width:60px;
     height:60px;
     border-radius: 50%;
+    
 }
 .about-barber-booking img {
-    width:40px;
-    padding:10px;
+    width: 40px;
+    position:absolute;
+    top:10px;
+    left:10px;
 }
 
 .about-barber-booking h3 {
@@ -273,23 +280,30 @@ position:"absolute"
     text-align: center;
 }
 
+.about-barber-booking h3 {
+    width:30%;
+    
+}
+
 
 
 /* fourth section */
 
 .testimonial {
-    background-color: rgb(205, 201, 201);
+    background-color: rgb(242, 238, 238);
     position:relative;
+    
     
 }
 
 .testimonial h2 {
+    padding-top:3em;
     color:var(--gold);
     font-size: 0.8em;
 }
 
 .testimonial h2,h3 {
-    padding-left:20px;
+    text-align: center;
 }
 
 /* CAROSEL START */
@@ -339,14 +353,14 @@ padding:10px;
 
 .test-card-person {
     display: flex;
-    text-align:justify;
-    padding-left:1vw;
+    text-align:flex-start;
+    padding-left:20px;
 }
 
 .test {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:flex-start;
 }
 
 .reviewer {
@@ -358,18 +372,22 @@ padding:10px;
 }
 
 .rev-icon {
-    padding-left:20px;
+    
 
 }
 
+/* inspectorn säger att den påverkas av margin och padding
+men jag hittar inget sådant, och kan inte nollställa */
 .costumer {
-    font-size: 0.6em;
+    font-family: 'poppins', sans-serif;
+    margin-left:10px;
+    font-size: 0.8em;
     color:var(--gold);
     text-transform: uppercase;
     margin:0;
-    padding-left:10px;
-
 }
+
+
 
 
 /* footer */
@@ -437,14 +455,27 @@ padding:10px;
 }
 
 
-.footer-card-last ul {
+.footer-card-last{
+    font-family:'poppins', sans-serif ;
+    display: flex;
+   
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:25px;
+}
+
+.last-card {
+    width:20px;
+}
+
+.last-card-list li {
+    padding:10px;
+}
+
+.last-card-list ul {
     padding:0;
-}
-
-.last-card-list {
-    display:flex;
-}
-
-.last-card1 {
-    width:3%;
 }
