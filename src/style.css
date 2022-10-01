@@ -116,22 +116,6 @@ button + .menu {
     left:center;
     background-color: rgba(0, 0, 0, 0.650);
 }
-/*
-sätt relative på parent för att inte bodyn
-ska räknas som nästa parent med en position.
-
-position:absolute; på både den mörkande div 
-som ska ligga över, men också på texten 
-på bakgrunden. 
-sen använder man z-index om det är knepigt. 
-
-position ska också användas på cirklarna
-i appcards
-där kan man använda minus-värden
-
-
-*/
-
 
 /* om man ska position */
 
@@ -181,16 +165,6 @@ där kan man använda minus-värden
     background-color: rgba(0, 0, 0, 0.301);
 }
 
-/* beskär bilderna i photoshop 
-"object-fit:cover"
-"object-position" (ej pixelvärde
-
-margin minusvärde
-position:"absolute"
-*/
-
-
-
 /* second section */
 .appointments {
     z-index: 2;
@@ -199,6 +173,7 @@ position:"absolute"
     flex-direction: column;
      
 }
+
 .app-cards {
     position: relative;
     color:var(--beige);
@@ -215,16 +190,23 @@ position:"absolute"
 /* IMAGE STYLING */ 
 
 .app-cards img {
-    width:200px;
-    height:200px;
+    width:160px;
+    height:160px;
     border-radius:50%;
     position: relative;
-    top:-100px;
+    top:-80px;
     margin:auto;
 }
 
+.app-cards h3 {
+    position: relative;
+    top:-50px;
+}
+
 .app-cards p {
-    padding-bottom: 100px;
+    position: relative;
+    top:-50px;
+    padding-bottom: 15px;
 }
 
 /* third section */
@@ -249,9 +231,13 @@ position:"absolute"
     width:200px;
     color:var(--beige);
     align-items: center;
+    margin-top: 50px;
     
 }
 
+.about-barber-img {
+    margin-bottom: 20px;
+}
 
 .circle {
     position: relative;
@@ -267,11 +253,12 @@ position:"absolute"
     width: 40px;
     position:absolute;
     top:10px;
-    left:10px;
+    left:12px;
 }
 
 .about-barber-booking h3 {
     font-size:0.8em ;
+    width:30%;
 }
 
 .about-barber-booking span {
@@ -280,10 +267,7 @@ position:"absolute"
     text-align: center;
 }
 
-.about-barber-booking h3 {
-    width:30%;
-    
-}
+
 
 
 
@@ -292,17 +276,22 @@ position:"absolute"
 .testimonial {
     background-color: rgb(242, 238, 238);
     position:relative;
+    padding-bottom: 20px;
+    margin:0;
+
     
-    
+
 }
 
 .testimonial h2 {
     padding-top:3em;
     color:var(--gold);
     font-size: 0.8em;
+    text-align: center;
 }
 
-.testimonial h2,h3 {
+
+.testimonial h3 {
     text-align: center;
 }
 
@@ -371,11 +360,6 @@ padding:10px;
     
 }
 
-.rev-icon {
-    
-
-}
-
 /* inspectorn säger att den påverkas av margin och padding
 men jag hittar inget sådant, och kan inte nollställa */
 .costumer {
@@ -390,7 +374,7 @@ men jag hittar inget sådant, och kan inte nollställa */
 
 
 
-/* footer */
+/* FOOTER */
 
 .main-footer {
     background-color: black;
@@ -398,6 +382,7 @@ men jag hittar inget sådant, och kan inte nollställa */
     display:flex;
     flex-direction: column;
     gap:2em;
+    padding:10px;
 }
 
 
@@ -413,32 +398,21 @@ men jag hittar inget sådant, och kan inte nollställa */
 .social {
     position: relative;
     background-color:var(--gold);
-    height:30px;
-    width:30px;
+    height:20px;
+    width:20px;
     border-radius: 50%;
-}
-
-.social img {
-    width:30%;
-    position: relative;
-    top: 6px; left:10px;
+    top: 4px; left:10px;
+    padding:5px;
 }
 
 
-.facebook img {
-    width:20%;
-    padding:10px;
-    position: relative;
-    top:-1px; left:0;
+.social img:first-child {
+    width:20px;
+    height:20px;
+    position:relative;
+    
 }
 
-.facebook {
-    position: relative;
-    background-color:var(--gold);
-    height:30px;
-    width:30px;
-    border-radius: 50%;
-}
 
 
 .last-card-list {
@@ -465,7 +439,7 @@ men jag hittar inget sådant, och kan inte nollställa */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap:25px;
+    gap:37px;
 }
 
 .last-card {
@@ -479,3 +453,97 @@ men jag hittar inget sådant, och kan inte nollställa */
 .last-card-list ul {
     padding:0;
 }
+
+.footer-card-last {
+    display: flex;
+    
+    align-items: center;
+    
+}
+
+
+@media screen and (min-width:900px) {
+ 
+    
+    /*header desktop */
+
+
+    /* appointments*/
+    .appointments {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .app-cards {
+        padding:0;
+    }
+
+
+    /* About barber */
+   
+    .about-barber {
+
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        padding:0;
+        position: relative;
+    }
+
+    .about-barber-img {
+        width:30%;
+        margin:0 40px 0 80px;
+    }
+
+    .about-barber-text {
+        padding:60px 30% 20px 0;
+    }
+
+    .about-barber-text>h3 {
+        font-size: 2em;
+    }
+
+    .about-barber-booking {
+        position: relative;
+        margin-top: 100px;
+        width:100%;
+    }
+
+    .about-barber-booking h3 span {
+        text-align: left;
+    } 
+
+
+    .all-cards {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .testimonial {
+        padding:15vh 0 20vh 0;
+    }
+
+
+     /* DESKTOP FOOTER */
+
+     .main-footer {
+        display:flex;
+        flex-direction: row;
+        
+     }
+
+    .icons {
+        gap:25px;
+    }
+    
+}
+
+@media screen and (min-width:900px) {
+    .flexbox {
+        justify-content: center;
+        align-items: center;
+    
+    }
+}
+    
