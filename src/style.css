@@ -1,549 +1,548 @@
 /* GLOBAL */
 @import url(reset.css); /* it doesnt work */
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;1,400&display=swap");
 
-*>body {box-sizing:border-box ;}
+* > body {
+  box-sizing: border-box;
+}
 
-h1 , h2 , h3 {
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    text-transform:uppercase;
-    padding:0;
-    margin:0;
+h1,
+h2,
+h3 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
 }
 
 /*line-height */
 
 p {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-ul {list-style-type: none;}
-
-a {text-decoration: none;
-    color:var(--beige);
-    font-family:'Poppins', sans-serif;
-    text-transform: capitalize;
+ul {
+  list-style-type: none;
 }
 
-
+a {
+  text-decoration: none;
+  color: var(--beige);
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+}
 
 body {
-    margin:0;
-    padding:0;
-    }
+  margin: 0;
+  padding: 0;
+}
 
 :root {
-    --gold: rgb(191, 146, 91);
-    --black: rgb(20, 27, 37);
-    --beige: rgb(235, 232, 222);
+  --gold: rgb(191, 146, 91);
+  --black: rgb(20, 27, 37);
+  --beige: rgb(235, 232, 222);
 }
 
 /*header*/
 
-
-
 /* Hamburger menue */
 button + .menu {
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-  }
-  button.menu-open + .menu {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-  }
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+button.menu-open + .menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
 
-.first-nav{
-    display:flex;
-    top:0;
-    width:100%;
-    height:5rem;
-    background-color: rgba(0, 0, 0, 0.970);
-    color:var(--beige);
-    justify-content: space-between;
-    align-items: center;
+/* test nav 
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.87);
+}
 
+.main-nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav a {
+  color: var(--black);
+}
+
+.main-nav a:hover {
+  color: var(--gold);
+}
+
+*/
+
+.first-nav {
+  display: flex;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+  background-color: rgba(0, 0, 0, 0.97);
+  color: var(--beige);
+  justify-content: space-between;
+  align-items: center;
 }
 
 .first-nav button {
-    background-color: transparent;
-    color:grey;
-    height:30px;
-    border:none;
-    padding:1rem;
+  background-color: transparent;
+  color: grey;
+  height: 30px;
+  border: none;
+  padding: 1rem;
 }
 
-
-.first-nav button:visited {color:grey;}
-.first-nav button:hover {color:var(--gold);}
-
-.first-nav h1 {padding:10px;
+.first-nav button:visited {
+  color: grey;
+}
+.first-nav button:hover {
+  color: var(--gold);
 }
 
-.first-nav button {}
+.first-nav h1 {
+  padding: 10px;
+}
 
+.first-nav button {
+}
 
 /* First section */
 
 .landing {
-
-
-    position:relative;
-    background-image: url(img/background.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: var(--beige);
-    height:100vh;
-
-    
+  position: relative;
+  background-image: url(img/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--beige);
+  height: 100vh;
 }
 
 .landing-container {
-    position: absolute;
-    margin-top:0;
-    z-index: 2;
+  position: absolute;
+  margin-top: 0;
+  z-index: 2;
 }
 
 .landing-container-dimmer {
-    z-index: 1;
-    position:absolute;
-    width:100%;
-    height:100%;
-    top:5rem;
-    left:center;
-    background-color: rgba(0, 0, 0, 0.650);
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 5rem;
+  left: center;
+  background-color: rgba(0, 0, 0, 0.65);
 }
 
 /* om man ska position */
 
 .landing-container {
-    z-index:1;
-    padding:10px;
-    max-width:1000px;
-     /* ge den rätt bredd */
+  z-index: 1;
+  padding: 10px;
+  max-width: 1000px;
+  /* ge den rätt bredd */
 }
 
 .landing background-img {
-    
-    width:100%;
-   
+  width: 100%;
 }
 
 .landing h2 {
-    color:var(--gold);
-    font-size: 1rem;
-    
+  color: var(--gold);
+  font-size: 1rem;
 }
 
 .landing h3 {
-    color:var(--beige);
-    font-size: 2.5rem;
-    
+  color: var(--beige);
+  font-size: 2.5rem;
 }
 
 .landing span {
-    color:transparent;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.900);
-    -webkit-text-fill-color: transparent;
-    }
-
-
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.9);
+  -webkit-text-fill-color: transparent;
+}
 
 .landing .landing-btn {
-
-    font-family: 'Poppins', sans-serif;
-    padding:10px;
-    background-color: transparent;
-    color:var(--gold);
-    border:var(--gold) solid 2px;
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+  background-color: transparent;
+  color: var(--gold);
+  border: var(--gold) solid 2px;
 }
 
 .landing-btn:hover {
-    background-color: rgba(0, 0, 0, 0.301);
+  background-color: rgba(0, 0, 0, 0.301);
 }
 
 /* second section */
 .appointments {
-    z-index: 2;
-    position: relative;
-    display:flex;
-    flex-direction: column;
-     
+  z-index: 2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .app-cards {
-    position: relative;
-    color:var(--beige);
-    text-align: center;
-    padding:0 15vw;
-    background-color:rgb(216, 171, 117);
-    
+  position: relative;
+  color: var(--beige);
+  text-align: center;
+  padding: 0 15vw;
+  background-color: rgb(216, 171, 117);
 }
 
 .app-cards:nth-child(even) {
-    background-color: var(--gold);
+  background-color: var(--gold);
 }
 
-/* IMAGE STYLING */ 
+/* IMAGE STYLING */
 
 .app-cards img {
-    width:160px;
-    height:160px;
-    border-radius:50%;
-    position: relative;
-    top:-80px;
-    margin:auto;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  position: relative;
+  top: -80px;
+  margin: auto;
 }
 
 .app-cards h3 {
-    position: relative;
-    top:-50px;
+  position: relative;
+  top: -50px;
 }
 
 .app-cards p {
-    position: relative;
-    top:-50px;
-    padding-bottom: 15px;
+  position: relative;
+  top: -50px;
+  padding-bottom: 15px;
 }
 
 /* third section */
 .about-barber {
-    display: flex;
-    flex-direction: column;
-    justify-content:space-between;
-    padding:10px;
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
 }
 
 .about-barber-text h2 {
-    padding-top:10px;
-    font-size:1em ;
-    color:var(--gold);
+  padding-top: 10px;
+  font-size: 1em;
+  color: var(--gold);
 }
 
 .about-barber-booking {
-    display:flex;
-    background-color: var(--gold);
-    height:100px;
-    width:200px;
-    color:var(--beige);
-    align-items: center;
-    margin-top: 50px;
-    
+  display: flex;
+  background-color: var(--gold);
+  height: 100px;
+  width: 200px;
+  color: var(--beige);
+  align-items: center;
+  margin-top: 50px;
 }
 
 .about-barber-img {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .circle {
-    position: relative;
-    margin-left:8px;
-    padding:2px;
-    background-color: black;
-    width:60px;
-    height:60px;
-    border-radius: 50%;
-    
+  position: relative;
+  margin-left: 8px;
+  padding: 2px;
+  background-color: black;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
 .about-barber-booking img {
-    width: 40px;
-    position:absolute;
-    top:10px;
-    left:12px;
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  left: 12px;
 }
 
 .about-barber-booking h3 {
-    font-size:0.8em ;
-    width:30%;
+  font-size: 0.8em;
+  width: 30%;
 }
 
 .about-barber-booking span {
-    display: block;
-    font-size: 3em;
-    text-align: center;
+  display: block;
+  font-size: 3em;
+  text-align: center;
 }
-
-
-
-
 
 /* fourth section */
 
 .testimonial {
-    background-color: rgb(242, 238, 238);
-    position:relative;
-    padding-bottom: 20px;
-    margin:0;
-
-    
-
+  background-color: rgb(242, 238, 238);
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0;
 }
 
 .testimonial h2 {
-    padding-top:3em;
-    color:var(--gold);
-    font-size: 0.8em;
-    text-align: center;
+  padding-top: 3em;
+  color: var(--gold);
+  font-size: 0.8em;
+  text-align: center;
 }
 
-
 .testimonial h3 {
-    text-align: center;
+  text-align: center;
 }
 
 /* CAROSEL START */
 
 .test-card {
-    position: relative;
-    background-color: white;
-    height: 170px;
-    width: 300px;
-    margin:20px;
-    border-radius:5px;  
+  position: relative;
+  background-color: white;
+  height: 170px;
+  width: 300px;
+  margin: 20px;
+  border-radius: 5px;
 }
-
 
 /* QOUTE ICON START */
 .qoute-background {
-    position:absolute;
-    width:40px;
-    height:40px;
-    border-radius: 50%;
-    background-color:var(--gold);
-    top:-18px;
-    left:8px;
-
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--gold);
+  top: -18px;
+  left: 8px;
 }
 .qoute-icon {
-    width:20px;
-    position: relative;
-    top:-6px;
-    left:18px;
-    transform: rotate(180deg);
+  width: 20px;
+  position: relative;
+  top: -6px;
+  left: 18px;
+  transform: rotate(180deg);
 }
 
-/* QOUTE ICON END */ 
+/* QOUTE ICON END */
 
 .test {
-padding:10px;
+  padding: 10px;
 }
-
 
 .test-card p {
- padding-left:10px;
- margin-left:10px;
- font-size: 0.8em;
+  padding-left: 10px;
+  margin-left: 10px;
+  font-size: 0.8em;
 }
 
-
 .test-card-person {
-    display: flex;
-    text-align:flex-start;
-    padding-left:20px;
+  display: flex;
+  text-align: flex-start;
+  padding-left: 20px;
 }
 
 .test {
-    display: flex;
-    flex-direction: column;
-    justify-content:flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .reviewer {
-    width: 20%;
-    height:20%;
-    border-radius: 50%;
-    
-    
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
 }
 
 /* inspectorn säger att den påverkas av margin och padding
 men jag hittar inget sådant, och kan inte nollställa */
 .costumer {
-    font-family: 'poppins', sans-serif;
-    margin-left:10px;
-    font-size: 0.8em;
-    color:var(--gold);
-    text-transform: uppercase;
-    margin:0;
+  font-family: "poppins", sans-serif;
+  margin-left: 10px;
+  font-size: 0.8em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin: 0;
 }
-
-
-
 
 /* FOOTER */
 
 .main-footer {
-    background-color: black;
-    color:var(--beige);
-    display:flex;
-    flex-direction: column;
-    gap:2em;
-    padding:10px;
+  background-color: black;
+  color: var(--beige);
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 10px;
 }
-
-
 
 .buttons-flex {
-    display: flex;
-    position:relative;
-    gap:10px;
-    
-  }
-
+  display: flex;
+  position: relative;
+  gap: 10px;
+}
 
 .social {
-    position: relative;
-    background-color:var(--gold);
-    height:20px;
-    width:20px;
-    border-radius: 50%;
-    top: 4px; left:10px;
-    padding:5px;
+  position: relative;
+  background-color: var(--gold);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  top: 4px;
+  left: 10px;
+  padding: 5px;
 }
-
 
 .social img:first-child {
-    width:20px;
-    height:20px;
-    position:relative;
-    
+  width: 20px;
+  height: 20px;
+  position: relative;
 }
 
-
-
 .last-card-list {
-    display: flex;
+  display: flex;
 }
 
 .footer-card ul {
-    padding:0;
+  padding: 0;
 }
 
 .footer-card li::before {
-    content:">";
-    padding:10px;
-}
-
-
-.footer-card-last{
-    font-family:'poppins', sans-serif ;
-    display: flex;
-   
-}
-
-.icons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap:37px;
-}
-
-.last-card {
-    width:20px;
-}
-
-.last-card-list li {
-    padding:10px;
-}
-
-.last-card-list ul {
-    padding:0;
+  content: ">";
+  padding: 10px;
 }
 
 .footer-card-last {
+  font-family: "poppins", sans-serif;
+  display: flex;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 37px;
+}
+
+.last-card {
+  width: 20px;
+}
+
+.last-card-list li {
+  padding: 10px;
+}
+
+.last-card-list ul {
+  padding: 0;
+}
+
+.footer-card-last {
+  display: flex;
+
+  align-items: center;
+}
+
+@media screen and (min-width: 900px) {
+  /*header desktop */
+
+  /* landing HERO*/
+
+  .landing {
+    height: 110vh;
+  }
+
+  .landing-container-dimmer {
+    height: 110vh;
+  }
+
+  .landing-container {
+    position: absolute;
+    top: 25vh;
+    left: 300px;
+    z-index: 2;
+    padding: 0 300px;
+  }
+
+  .landing-container p {
+    padding: 0 40px 0 60px;
+  }
+
+  .landing-btn {
+    margin-left: 60px;
+  }
+
+  /* appointments*/
+  .appointments {
     display: flex;
-    
+    flex-direction: row;
+  }
+
+  .app-cards {
+    padding: 0;
+  }
+
+  /* About barber */
+
+  .about-barber {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    padding: 0;
+    position: relative;
+  }
+
+  .about-barber-img {
+    width: 30%;
+    margin: 0 40px 0 80px;
+  }
+
+  .about-barber-text {
+    padding: 60px 30% 20px 0;
+  }
+
+  .about-barber-text > h3 {
+    font-size: 2em;
+  }
+
+  .about-barber-booking {
+    position: relative;
+    margin-top: 100px;
+    width: 100%;
+  }
+
+  .about-barber-booking h3 span {
+    text-align: left;
+  }
+
+  .all-cards {
+    display: flex;
+    justify-content: center;
+  }
+
+  .testimonial {
+    padding: 15vh 0 20vh 0;
+  }
+
+  /* DESKTOP FOOTER */
+
+  .main-footer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .icons {
+    gap: 25px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .flexbox {
+    justify-content: center;
     align-items: center;
-    
+  }
 }
-
-
-@media screen and (min-width:900px) {
- 
-    
-    /*header desktop */
-
-
-    /* appointments*/
-    .appointments {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .app-cards {
-        padding:0;
-    }
-
-
-    /* About barber */
-   
-    .about-barber {
-
-        display: flex;
-        flex-direction: row;
-        text-align: left;
-        padding:0;
-        position: relative;
-    }
-
-    .about-barber-img {
-        width:30%;
-        margin:0 40px 0 80px;
-    }
-
-    .about-barber-text {
-        padding:60px 30% 20px 0;
-    }
-
-    .about-barber-text>h3 {
-        font-size: 2em;
-    }
-
-    .about-barber-booking {
-        position: relative;
-        margin-top: 100px;
-        width:100%;
-    }
-
-    .about-barber-booking h3 span {
-        text-align: left;
-    } 
-
-
-    .all-cards {
-        display: flex;
-        justify-content: center;
-
-    }
-
-    .testimonial {
-        padding:15vh 0 20vh 0;
-    }
-
-
-     /* DESKTOP FOOTER */
-
-     .main-footer {
-        display:flex;
-        flex-direction: row;
-        
-     }
-
-    .icons {
-        gap:25px;
-    }
-    
-}
-
-@media screen and (min-width:900px) {
-    .flexbox {
-        justify-content: center;
-        align-items: center;
-    
-    }
-}
-    
