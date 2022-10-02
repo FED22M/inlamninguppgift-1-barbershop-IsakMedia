@@ -36,6 +36,7 @@ a {
 body {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 :root {
@@ -46,7 +47,12 @@ body {
 
 /*header*/
 
+.main-nav {
+  display: none;
+}
+
 /* Hamburger menue */
+
 button + .menu {
   display: none;
   opacity: 0;
@@ -56,30 +62,30 @@ button.menu-open + .menu {
   display: block;
   opacity: 1;
   visibility: visible;
+  background-color: rgba(0, 0, 0, 0.97);
+  padding: 10px;
 }
 
-/* test nav 
-.main-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: rgba(0, 0, 0, 0.87);
+.menu {
+  position: absolute;
+  top: 79px;
+  right: 0px;
+  overflow: visible;
+  z-index: 5;
 }
 
-.main-nav ul {
-  display: flex;
-  gap: 20px;
+.menu ul {
+  margin: 0;
+  padding: 0;
 }
 
-.main-nav a {
-  color: var(--black);
-}
-
-.main-nav a:hover {
+.menu a:hover {
   color: var(--gold);
 }
 
-*/
+.menu a:active {
+  color: var(--gold);
+}
 
 .first-nav {
   display: flex;
@@ -98,6 +104,7 @@ button.menu-open + .menu {
   height: 30px;
   border: none;
   padding: 1rem;
+  margin-right: 22px;
 }
 
 .first-nav button:visited {
@@ -282,6 +289,10 @@ button.menu-open + .menu {
 
 /* fourth section */
 
+/* Efter att jag försökte göra en carousel 
+ser jag att innehållet i mina .test-card är olika stora.
+vänster är störst och blir de mindre och mindre */
+
 .testimonial {
   background-color: rgb(242, 238, 238);
   position: relative;
@@ -302,13 +313,22 @@ button.menu-open + .menu {
 
 /* CAROSEL START */
 
+.all-cards {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+  scroll-behavior: smooth;
+}
+
 .test-card {
   position: relative;
   background-color: white;
   height: 170px;
   width: 300px;
-  margin: 20px;
+  margin: 20px 10px;
   border-radius: 5px;
+  min-width: 300px;
+  scroll-snap-align: center;
 }
 
 /* QOUTE ICON START */
@@ -359,8 +379,6 @@ button.menu-open + .menu {
   border-radius: 50%;
 }
 
-/* inspectorn säger att den påverkas av margin och padding
-men jag hittar inget sådant, och kan inte nollställa */
 .costumer {
   font-family: "poppins", sans-serif;
   margin-left: 10px;
@@ -450,6 +468,25 @@ men jag hittar inget sådant, och kan inte nollställa */
 @media screen and (min-width: 900px) {
   /*header desktop */
 
+  #menu-button {
+    display: none;
+  }
+
+  button + .menu {
+    display: block;
+    opacity: 100;
+    visibility: visible;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-right: 100px;
+    position: relative;
+    top: -50px;
+  }
+
   /* landing HERO*/
 
   .landing {
@@ -477,6 +514,7 @@ men jag hittar inget sådant, och kan inte nollställa */
   }
 
   /* appointments*/
+
   .appointments {
     display: flex;
     flex-direction: row;
@@ -522,6 +560,11 @@ men jag hittar inget sådant, och kan inte nollställa */
   .all-cards {
     display: flex;
     justify-content: center;
+    overflow-x: hidden;
+  }
+
+  .test-card {
+    min-width: 300px;
   }
 
   .testimonial {
@@ -538,9 +581,7 @@ men jag hittar inget sådant, och kan inte nollställa */
   .icons {
     gap: 25px;
   }
-}
 
-@media screen and (min-width: 900px) {
   .flexbox {
     justify-content: center;
     align-items: center;
