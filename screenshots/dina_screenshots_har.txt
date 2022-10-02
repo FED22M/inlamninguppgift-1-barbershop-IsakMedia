@@ -1,0 +1,2 @@
+en mac
+en android
