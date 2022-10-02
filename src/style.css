@@ -1,8 +1,23 @@
+/* FIXA STICKY PÅ MENYN I MOBIL
+  FIXA TEXTEN PÅ HERON
+  STYLA STJÄRNORNA RÄTT
+  ALIGNA SAKER
+  MITTENCENTRERA APP-CARDS I KARUSELLEN
+    - KOLLA STORLEKEN PÅ INNEHÅLLET I TEST-CARDS
+  ALIGNA IKONERNA I SISTA STYCKET I FOOTERN
+
+
+*/
+
 /* GLOBAL */
 @import url(reset.css); /* it doesnt work */
 
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;1,400&display=swap");
 
+html {
+  height: 100%;
+  overflow: hidden;
+}
 * > body {
   box-sizing: border-box;
 }
@@ -15,8 +30,6 @@ h3 {
   padding: 0;
   margin: 0;
 }
-
-/*line-height */
 
 p {
   font-family: "Poppins", sans-serif;
@@ -37,6 +50,8 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
+  height: 100%;
+  overflow: auto;
 }
 
 :root {
@@ -46,6 +61,10 @@ body {
 }
 
 /*header*/
+
+header {
+  height: 80px;
+}
 
 .main-nav {
   display: none;
@@ -85,6 +104,13 @@ button.menu-open + .menu {
 
 .menu a:active {
   color: var(--gold);
+}
+
+.menu-wrapper {
+  position: fixed;
+  height: 5rem;
+  width: 100%;
+  z-index: 9;
 }
 
 .first-nav {
@@ -135,7 +161,7 @@ button.menu-open + .menu {
 
 .landing-container {
   position: absolute;
-  margin-top: 0;
+  margin-top: 150px;
   z-index: 2;
 }
 
@@ -143,8 +169,8 @@ button.menu-open + .menu {
   z-index: 1;
   position: absolute;
   width: 100%;
-  height: 20%;
-  top: 5rem;
+  height: 120%;
+  top: 2rem;
   left: center;
   background-color: rgba(0, 0, 0, 0.65);
 }
@@ -332,6 +358,11 @@ vänster är störst och blir de mindre och mindre */
 }
 
 /* QOUTE ICON START */
+
+/* har inte med alt på iconen för qoutation mark
+      då det känns onödigt och utan vikt för någon som
+      använder screen readers */
+
 .qoute-background {
   position: absolute;
   width: 40px;
@@ -478,6 +509,10 @@ vänster är störst och blir de mindre och mindre */
     visibility: visible;
   }
 
+  button.menu-open + .menu {
+    background: none;
+  }
+
   .menu ul {
     display: flex;
     flex-direction: row;
@@ -501,16 +536,17 @@ vänster är störst och blir de mindre och mindre */
     position: absolute;
     top: 25vh;
     left: 300px;
+    max-width: 40%;
     z-index: 2;
-    padding: 0 300px;
+    padding: 0;
   }
 
   .landing-container p {
-    padding: 0 40px 0 60px;
+    /* padding: 0 40px 0 60px; */
   }
 
   .landing-btn {
-    margin-left: 60px;
+    /* margin-left: 60px; */
   }
 
   /* appointments*/
