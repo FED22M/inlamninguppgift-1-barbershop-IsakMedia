@@ -1,0 +1,627 @@
+/* 
+     hej mikko, här är ett axplock av allt som är fel.
+  
+     -FIXA TEXTEN PÅ HERO-IMG
+  -STYLA STJÄRNORNA RÄTT
+  -ALIGNA SAKER
+  - MITTENCENTRERA APP-CARDS I KARUSELLEN
+    - KOLLA STORLEKEN PÅ INNEHÅLLET I TEST-CARDS
+  -ALIGNA IKONERNA I SISTA STYCKET I FOOTERN
+  - RESET:EN FUNGERAR INTE
+
+*/
+
+/* GLOBAL */
+@import url(reset.css); /* it doesnt work */
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;1,400&display=swap");
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+* > body {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--beige);
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100%;
+  overflow: auto;
+}
+
+:root {
+  --gold: rgb(191, 146, 91);
+  --black: rgb(20, 27, 37);
+  --beige: rgb(235, 232, 222);
+}
+
+/*header*/
+
+header {
+  height: 80px;
+}
+
+.main-nav {
+  display: none;
+}
+
+/* Hamburger menue */
+
+button + .menu {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+button.menu-open + .menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.97);
+  padding: 10px;
+}
+
+.menu {
+  position: absolute;
+  top: 79px;
+  right: 0px;
+  overflow: visible;
+  z-index: 5;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.menu a:hover {
+  color: var(--gold);
+}
+
+.menu a:active {
+  color: var(--gold);
+}
+
+.menu-wrapper {
+  position: fixed;
+  height: 5rem;
+  width: 100%;
+  z-index: 9;
+}
+
+.first-nav {
+  display: flex;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+  background-color: rgba(0, 0, 0, 0.97);
+  color: var(--beige);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.first-nav button {
+  background-color: transparent;
+  color: grey;
+  height: 30px;
+  border: none;
+  padding: 1rem;
+  margin-right: 22px;
+}
+
+.first-nav button:visited {
+  color: grey;
+}
+.first-nav button:hover {
+  color: var(--gold);
+}
+
+.first-nav h1 {
+  padding: 10px;
+}
+
+.first-nav button {
+}
+
+/* First section */
+
+.landing {
+  position: relative;
+  background-image: url(img/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--beige);
+  height: 100vh;
+}
+
+.landing-container {
+  position: absolute;
+  margin-top: 150px;
+  z-index: 2;
+}
+
+.landing-container-dimmer {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  top: 5rem;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+/* om man ska position */
+
+.landing-container {
+  z-index: 1;
+  padding: 10px;
+  max-width: 1000px;
+  /* ge den rätt bredd */
+}
+
+.landing background-img {
+  width: 100%;
+}
+
+.landing h2 {
+  color: var(--gold);
+  font-size: 1rem;
+}
+
+.landing h3 {
+  color: var(--beige);
+  font-size: 2.5rem;
+}
+
+.landing span {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.9);
+  -webkit-text-fill-color: transparent;
+}
+
+.landing .landing-btn {
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+  background-color: transparent;
+  color: var(--gold);
+  border: var(--gold) solid 2px;
+}
+
+.landing-btn:hover {
+  background-color: rgba(0, 0, 0, 0.301);
+}
+
+/* second section */
+.appointments {
+  z-index: 2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-cards {
+  position: relative;
+  color: var(--beige);
+  text-align: center;
+  padding: 0 15vw;
+  background-color: rgb(216, 171, 117);
+}
+
+.app-cards:nth-child(even) {
+  background-color: var(--gold);
+}
+
+/* IMAGE STYLING */
+
+.app-cards img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  position: relative;
+  top: -80px;
+  margin: auto;
+}
+
+.app-cards h3 {
+  position: relative;
+  top: -50px;
+}
+
+.app-cards p {
+  position: relative;
+  top: -50px;
+  padding-bottom: 15px;
+}
+
+/* third section */
+.about-barber {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.about-barber-text h2 {
+  padding-top: 10px;
+  font-size: 1em;
+  color: var(--gold);
+}
+
+.about-barber-booking {
+  display: flex;
+  background-color: var(--gold);
+  height: 100px;
+  width: 200px;
+  color: var(--beige);
+  align-items: center;
+  margin-top: 50px;
+}
+
+.about-barber-img {
+  margin-bottom: 20px;
+}
+
+.circle {
+  position: relative;
+  margin-left: 8px;
+  padding: 2px;
+  background-color: black;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.about-barber-booking img {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+}
+
+.about-barber-booking h3 {
+  font-size: 0.8em;
+  width: 30%;
+}
+
+.about-barber-booking span {
+  display: block;
+  font-size: 3em;
+  text-align: center;
+}
+
+/* fourth section */
+
+/* Efter att jag försökte göra en carousel 
+ser jag att innehållet i mina .test-card är olika stora.
+vänster är störst och blir de mindre och mindre */
+
+.testimonial {
+  background-color: rgb(242, 238, 238);
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+.testimonial h2 {
+  padding-top: 3em;
+  color: var(--gold);
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.testimonial h3 {
+  text-align: center;
+}
+
+/* CAROSEL START */
+
+.all-cards {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+  scroll-behavior: smooth;
+}
+
+.test-card {
+  position: relative;
+  background-color: white;
+  height: 170px;
+  width: 300px;
+  margin: 20px 10px;
+  border-radius: 5px;
+  min-width: 300px;
+  scroll-snap-align: center;
+}
+
+/* QOUTE ICON START */
+
+/* har inte med alt på iconen för qoutation mark
+      då det känns onödigt och utan vikt för någon som
+      använder screen readers */
+
+.qoute-background {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--gold);
+  top: -18px;
+  left: 8px;
+}
+.qoute-icon {
+  width: 20px;
+  position: relative;
+  top: -6px;
+  left: 18px;
+  transform: rotate(180deg);
+}
+
+/* QOUTE ICON END */
+
+.test {
+  padding: 10px;
+}
+
+.test-card p {
+  padding-left: 10px;
+  margin-left: 10px;
+  font-size: 0.8em;
+}
+
+.test-card-person {
+  display: flex;
+  text-align: center;
+  padding-left: 20px;
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.reviewer {
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+}
+
+.costumer {
+  font-family: "poppins", sans-serif;
+  margin-left: 10px;
+  font-size: 0.8em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* FOOTER */
+
+.main-footer {
+  background-color: black;
+  color: var(--beige);
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 10px;
+}
+
+.buttons-flex {
+  display: flex;
+  position: relative;
+  gap: 10px;
+}
+
+.social {
+  position: relative;
+  background-color: var(--gold);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  top: 4px;
+  left: 10px;
+  padding: 5px;
+}
+
+.social img:first-child {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.last-card-list {
+  display: flex;
+}
+
+.footer-card ul {
+  padding: 0;
+}
+
+.footer-card li::before {
+  content: ">";
+  padding: 10px;
+}
+
+.footer-card-last {
+  font-family: "poppins", sans-serif;
+  display: flex;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 37px;
+}
+
+.last-card {
+  width: 20px;
+}
+
+.last-card-list li {
+  padding: 10px;
+}
+
+.last-card-list ul {
+  padding: 0;
+}
+
+.footer-card-last {
+  display: flex;
+
+  align-items: center;
+}
+
+@media screen and (min-width: 900px) {
+  /*header desktop */
+
+  #menu-button {
+    display: none;
+  }
+
+  button + .menu {
+    display: block;
+    opacity: 100;
+    visibility: visible;
+  }
+
+  button.menu-open + .menu {
+    background: none;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-right: 100px;
+    position: relative;
+    top: -43px;
+  }
+
+  /* landing HERO*/
+
+  .landing {
+    height: 110vh;
+  }
+
+  .landing-container-dimmer {
+    height: 110vh;
+  }
+
+  .landing-container {
+    position: absolute;
+    top: 25vh;
+    left: 300px;
+    max-width: 40%;
+    z-index: 2;
+    padding: 0;
+  }
+
+  .landing-container p {
+    /* padding: 0 40px 0 60px; */
+  }
+
+  .landing-btn {
+    /* margin-left: 60px; */
+  }
+
+  /* appointments*/
+
+  .appointments {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .app-cards {
+    padding: 0;
+  }
+
+  /* About barber */
+
+  .about-barber {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    padding: 0;
+    position: relative;
+  }
+
+  .about-barber-img {
+    width: 30%;
+    margin: 0 40px 0 80px;
+  }
+
+  .about-barber-text {
+    padding: 60px 30% 20px 0;
+  }
+
+  .about-barber-text > h3 {
+    font-size: 2em;
+  }
+
+  .about-barber-booking {
+    position: relative;
+    margin-top: 100px;
+    width: 100%;
+  }
+
+  .about-barber-booking h3 span {
+    text-align: left;
+  }
+
+  .all-cards {
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+  }
+
+  .test-card {
+    min-width: 300px;
+  }
+
+  .testimonial {
+    padding: 15vh 0 20vh 0;
+  }
+
+  /* DESKTOP FOOTER */
+
+  .main-footer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .icons {
+    gap: 25px;
+  }
+
+  .flexbox {
+    justify-content: center;
+    align-items: center;
+  }
+}
